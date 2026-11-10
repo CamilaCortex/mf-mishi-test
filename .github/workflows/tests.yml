@@ -1,0 +1,15 @@
+# CI de la fábrica para proyectos web: revisa la sintaxis y corre los tests con Node.
+name: tests
+on:
+  push:
+  pull_request:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: for f in src/*.js tests/*.js; do node --check "$f"; done
+      - run: node --test

@@ -1,0 +1,9 @@
+{
+  "name": "mf-mishi-test",
+  "private": true,
+  "type": "module",
+  "description": "Una lista de tareas con un mishi que te acompaña y cambia de ánimo según tu avance. Todo se guarda en tu navegador.",
+  "scripts": {
+    "test": "node --test"
+  }
+}
