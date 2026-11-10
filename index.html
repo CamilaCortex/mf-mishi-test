@@ -11,6 +11,27 @@
   <main id="app" class="app">
     <h1>Mishi Tareas</h1>
     <p class="summary">Una lista de tareas con un mishi que te acompaña y cambia de ánimo según tu avance. Todo se guarda en tu navegador.</p>
+    <section id="progress" class="progress">
+      <p id="progress-text" class="progress-text" aria-live="polite"></p>
+      <p id="celebration" class="celebration" hidden></p>
+      <div id="confetti" class="confetti" aria-hidden="true"></div>
+    </section>
+    <section class="mishi" aria-labelledby="mishi-title">
+      <h2 id="mishi-title" class="visually-hidden">Tu mishi</h2>
+      <div class="mishi-avatar">
+        <span id="mishi-emoji" class="mishi-emoji" aria-hidden="true">😴</span>
+      </div>
+      <p id="mishi-phrase" class="mishi-bubble" aria-live="polite"></p>
+    </section>
+    <form id="task-form" class="task-form" autocomplete="off">
+      <label for="task-input" class="field-label">¿Qué tienes que hacer?</label>
+      <div class="task-form-row">
+        <input type="text" id="task-input" name="task" placeholder="Escribe una tarea…" maxlength="200">
+        <button type="submit" class="add">Agregar</button>
+      </div>
+    </form>
+    <p id="empty" class="empty" hidden>Aún no tienes tareas. ¡Escribe la primera!</p>
+    <ul id="task-list" class="task-list"></ul>
   </main>
   <footer class="credits">Hecho por mi-fabrica</footer>
 </body>
